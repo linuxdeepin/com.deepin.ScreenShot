@@ -4,7 +4,9 @@ rm /usr/share/deepin-flatpak/app/com.deepin.ScreenShot/x86_64/master/bundle
 set -e
 for f in `ls -d /home/*/`;
 	do
-		mkdir -p $f/.var/app/com.deepin.ScreenShot/cache/
+		mkdir -p $f/.var/app/com.deepin.ScreenShot/cache/;
+		USER=`echo $f|cut -d '/' -f 3`;
+		chown -R $USER:$USER $f
 		tar -zxvf /usr/share/deepin-flatpak/runtime/com.deepin.Platform/x86_64/15.5/fontconfig.tar.gz -C $f.var/app/com.deepin.ScreenShot/cache/
 done
 
