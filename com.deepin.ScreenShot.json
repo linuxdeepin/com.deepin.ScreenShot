@@ -1,5 +1,5 @@
 {
-    "app-id": "com.deepin.Screenshot",
+    "app-id": "com.deepin.ScreenShot",
     "runtime": "com.deepin.Platform",
     "runtime-version": "15.5",
     "sdk": "com.deepin.Sdk",
