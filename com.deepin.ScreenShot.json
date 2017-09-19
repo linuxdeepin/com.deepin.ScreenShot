@@ -1,11 +1,11 @@
 {
     "app-id": "com.deepin.Screenshot",
     "runtime": "com.deepin.Platform",
-    "runtime-version": "15.4.1",
+    "runtime-version": "15.5",
     "sdk": "com.deepin.Sdk",
     "command": "deepin-screenshot",
     "separate-locales": false,
-    "branch": "1.0.8",
+    "branch": "master",
 	"rename-desktop-file": "deepin-screenshot.desktop",
 	"rename-icon": "deepin-screenshot",
     "tags": ["proprietary"],
@@ -28,7 +28,7 @@
 						{
 								"type": "git",
 								"url": "https://github.com/linuxdeepin/deepin-screenshot",
-								"branch": "4.0.8"
+								"branch": "73b5baf00471f92a927bd674bb6a810e4518f1ad"
 						},
 						{
 								"type": "script",
