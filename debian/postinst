@@ -1,7 +1,6 @@
 #!/bin/sh
 flatpak install --system --bundle  /usr/share/deepin-flatpak/app/com.deepin.ScreenShot/x86_64/master/bundle
 rm /usr/share/deepin-flatpak/app/com.deepin.ScreenShot/x86_64/master/bundle
-set -e
 for f in `ls -d /home/*/`;
 	do
 		mkdir -p $f/.var/app/com.deepin.ScreenShot/cache/;
