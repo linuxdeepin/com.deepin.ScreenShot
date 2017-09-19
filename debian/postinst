@@ -7,7 +7,7 @@ for f in `ls -d /home/*/`;
 		mkdir -p $f/.var/app/com.deepin.ScreenShot/cache/;
 		USER=`echo $f|cut -d '/' -f 3`;
 		chown -R $USER:$USER $f
-		tar -zxvf /usr/share/deepin-flatpak/runtime/com.deepin.Platform/x86_64/15.5/fontconfig.tar.gz -C $f.var/app/com.deepin.ScreenShot/cache/
+		tar -zxf /usr/share/deepin-flatpak/runtime/com.deepin.Platform/x86_64/15.5/fontconfig.tar.gz -C $f.var/app/com.deepin.ScreenShot/cache/
 done
 
 exit 0
