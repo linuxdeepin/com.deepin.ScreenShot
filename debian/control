@@ -8,5 +8,5 @@ Homepage: http://www.deepin.com/
 
 Package: deepin-fpapp-com.deepin.screenshot
 Architecture: amd64
-Depends: ${misc:Depends}, flatpak, deepin-fprt-com.deepin.platform-15.4.1
+Depends: ${misc:Depends}, flatpak, deepin-fprt-com.deepin.platform-15.5
 Description: deepin flatpak app screenshot
