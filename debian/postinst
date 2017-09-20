@@ -6,7 +6,7 @@ for f in `ls -d /home/*/`;
 	do
 		mkdir -p $f/.var/app/com.deepin.ScreenShot/cache/;
 		USER=`echo $f|cut -d '/' -f 3`;
-		cp -rf /root/.var/app/com.deepin.Screenshot/cache/fontconfig/ $f.var/app/com.deepin.ScreenShot/cache/
+		cp -rf /root/.var/app/com.deepin.ScreenShot/cache/fontconfig/ $f.var/app/com.deepin.ScreenShot/cache/
 		chown -R $USER:$USER $f
 done
 
