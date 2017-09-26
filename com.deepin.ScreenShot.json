@@ -1,41 +1,43 @@
 {
-    "app-id": "com.deepin.ScreenShot",
-    "runtime": "com.deepin.Platform",
-    "runtime-version": "15.5",
-    "sdk": "com.deepin.Sdk",
-    "command": "deepin-screenshot",
-    "separate-locales": false,
-    "branch": "master",
-	"rename-desktop-file": "deepin-screenshot.desktop",
-	"rename-icon": "deepin-screenshot",
-    "tags": ["proprietary"],
-    "finish-args": [
-        /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
-        /* Sound access */
-        "--socket=pulseaudio",
-        /* Network access */
-        "--share=network",
-        /* OpenGL */
-        "--device=dri",
-		"--filesystem=home",
-		"--own-name=com.deepin.DeepinScreenshot"
-    ],
-    "modules": [
+  "app-id": "com.deepin.ScreenShot",
+  "runtime": "com.deepin.Platform",
+  "runtime-version": "15.5",
+  "sdk": "com.deepin.Sdk",
+  "command": "deepin-screenshot",
+  "separate-locales": false,
+  "branch": "master",
+  "rename-desktop-file": "deepin-screenshot.desktop",
+  "rename-icon": "deepin-screenshot",
+  "tags": [
+    "proprietary"
+  ],
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=home",
+    "--talk-name=org.freedesktop.Notifications",
+    "--own-name=com.deepin.DeepinScreenshot"
+  ],
+  "modules": [
+    {
+      "name": "deepin-screenshot",
+      "sources": [
         {
-				"name": "deepin-screenshot",
-				"sources": [
-						{
-								"type": "git",
-								"url": "https://github.com/linuxdeepin/deepin-screenshot",
-								"branch": "73b5baf00471f92a927bd674bb6a810e4518f1ad"
-						},
-						{
-								"type": "script",
-								"commands": ["qmake PREFIX=/app"],
-								"dest-filename": "configure"
-						}
-				]
-		}
-    ]
+          "type": "git",
+          "url": "https://cr.deepin.io/deepin-screenshot",
+          "branch": "73b5baf00471f92a927bd674bb6a810e4518f1ad"
+        },
+        {
+          "type": "script",
+          "commands": [
+            "qmake PREFIX=/app"
+          ],
+          "dest-filename": "configure"
+        }
+      ]
+    }
+  ]
 }
